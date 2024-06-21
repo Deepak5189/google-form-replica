@@ -48,9 +48,9 @@ Public Class ViewSubmissionsForm
         Else
             If currentIndex < 0 Then
                 currentIndex = 0
-                btnPrevious.Enabled = False
                 Await LoadSubmissions(currentIndex)
                 DisplaySubmission()
+                btnPrevious.Enabled = False
             ElseIf currentIndex = 0 Then
                 ' Clear the fields
                 txtName.Text = String.Empty
@@ -64,8 +64,8 @@ Public Class ViewSubmissionsForm
             Else
                 currentIndex -= 1
                 Await LoadSubmissions(currentIndex)
-                btnNext.Enabled = False
                 DisplaySubmission()
+                btnNext.Enabled = False
             End If
         End If
     End Sub
